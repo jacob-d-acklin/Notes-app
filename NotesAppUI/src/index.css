@@ -1,0 +1,441 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+html, body, #root, #defaultLayout, #guestLayout {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #212121;
+    background-color: #f6f6f6;
+}
+
+.alert {
+    padding: 1rem;
+    background-color: #ff4040;
+    color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-signup-form{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(76, 92, 175, 0.24);
+    border-radius: 25px;
+}
+
+.login-signup-form .form{
+    width: 360px;
+    /*height: 400px;*/
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    padding: 34px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.login-signup-form .form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-signup-form .form .message a {
+    color: #5b08a7;
+    text-decoration: none;
+}
+
+.passwordRequirements{
+    font-weight:bolder;
+    margin-top: -15px;
+}
+
+
+.aside-link{
+    height: 90px;
+    font-size: 2em;
+    white-space: nowrap;
+}
+
+.aside-link:hover{
+    transform: scale(1.1);
+}
+
+.createdNoteGrid{
+    /*display: grid;*/
+    /*grid-template-columns: repeat(4,1fr);*/
+    /*column-gap: 10px;*/
+    /*row-gap: 10px;*/
+}
+
+/* Define the grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Default grid with minimum item width of 200px */
+    grid-gap: 20px; /* Adjust the gap between grid items */
+    overflow-y: scroll;
+    height: 600px;
+}
+
+/* Media query for smaller screens */
+/*@media screen and (max-width: 768px) {*/
+/*    .grid-container {*/
+/*        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); !* Adjust grid for smaller screens *!*/
+/*    }*/
+/*}*/
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust grid for even smaller screens */
+    }
+}
+
+
+
+
+.createANote{
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*padding: 7px;*/
+    /*border: 1px solid black;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    /*width: 300px;*/
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    background-color: rgba(76, 92, 175, 0.24);
+}
+
+.createANote:hover{
+    transform: scale(.97);
+    transition-duration: .3s;
+}
+
+.createdNoteTitle{
+    border-bottom: 1px solid black;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: black;
+}
+
+.createdNoteBody{
+    height: 100px;
+    font-size: 1.6em;
+    color: black;
+    overflow: hidden;
+}
+
+.note-body-text{
+    /*white-space: nowrap;*/
+    /*height: 200px;*/
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.createdNoteFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid black;
+}
+
+
+
+/* Default font size */
+.text {
+    font-size: 1em; /* or any other default size */
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .text {
+        font-size: 0.9em; /* Adjust font size relative to viewport width */
+    }
+}
+
+/* Additional media queries for even smaller screens if needed */
+@media screen and (max-width: 480px) {
+    .text {
+        font-size: 8vw; /* Adjust font size relative to viewport width */
+    }
+}
+
+
+.createANote:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+#defaultLayout {
+    display: flex;
+}
+
+#defaultLayout aside {
+    width: 240px;
+    background-color: rgba(76, 92, 175, 0.24);
+    padding: 1rem
+}
+
+#defaultLayout .content {
+    flex: 1;
+
+}
+
+#defaultLayout main {
+    padding: 2rem;
+}
+
+#defaultLayout aside > a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+
+#defaultLayout aside > a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#defaultLayout header {
+    height: 80px;
+    padding: 2rem 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-name{
+    font-size: 2rem;
+}
+
+.username{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.btn-logout{
+    width: 100px;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+    background-color: rgba(76, 92, 175, 0.24);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-logout, a{
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn-logout:hover{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(.9);
+
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.modal-content{
+    width: 500px;
+    background-color: #fff;
+    transform: translateY(-200px);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.modal.show .modal-content{
+    transform: translateY(0);
+
+}
+
+.modal-header, .modal-footer{
+    padding: 10px;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal-title{
+    margin: 0;
+    font-size: 2rem;
+}
+
+.modal-body{
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    height: 200px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.close-Modal-Button{
+    display: block;
+    margin: 5px 0 0 5px;
+
+}
+
+.close-Modal-Button:hover{
+    transform: scale(.9);
+}
+
+.note-btn:hover{
+    transform: scale(1.4);
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+
+.form-layout{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 520px;
+
+}
+
+.title-label{
+    margin-right: auto;
+}
+
+.title-input-container{
+    width: 100%;
+    display: flex;
+    padding: 15px 0 5px 0;
+    /*justify-content: center;*/
+
+}
+
+.body-input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 35px 0 5px 0;
+}
+
+textarea{
+    padding: 20px;
+    font-size: 1rem;
+}
+
+title-input-container, input{
+    width: 300px;
+    background: none;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-bottom: 2px outset darkgray;
+
+}
+
+.save-document{
+    width: 200px;
+    height: 90px;
+    margin: auto;
+    cursor: pointer;
+    background-color: rgba(76, 92, 175, 0.24);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.save-document:hover{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    font-size: 1.2rem;
+}
+
+.userProfile{
+    display: flex;
+    height: 50vh;
+
+}
+
+.credentials{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align: left;
+}
+
+.deleteAccountButton{
+    display: inline-block;
+
+}
+
+.deleteAccountButton:hover{
+    transform: scale(1.4);
+    transition-duration: .5s;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
